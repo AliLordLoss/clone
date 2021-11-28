@@ -60,7 +60,9 @@ function getImages(){
     data = {
         filter_type: aggreagation_column_list.options[aggreagation_column_list.selectedIndex].text,
         filter_value: aggreagation_values_list.options[aggreagation_values_list.selectedIndex].text,
-        prediction_model: prediction_models_select.options[prediction_models_select.selectedIndex].text
+        prediction_model: prediction_models_select.options[prediction_models_select.selectedIndex].text,
+        z: document.getElementById("z").value,
+        interval_width: document.getElementById("interval").value
     }
     fetch(url, {method:'POST', headers: {'Accept': 'application/json','Content-Type': 'application/json'}, body: JSON.stringify(data)})
         .then(response => response.json())
@@ -77,7 +79,7 @@ function getImages(){
 }
 </script>
 <body>
-        <div class="my-flex">
+        <div class="container my-flex">
         <div class="banner">
         <h1>Statistical model test</h1>
         </div>
@@ -91,13 +93,19 @@ function getImages(){
 
 
 <b> Select filter type: </b>
-<select class="form-select" id="aggregation_column" onchange = "setFilterValues()" >
-    <option> province </option>
-    <option> cbp </option>
-    <option> ratinggroup </option>
-</select>
+<div class="row">
+    <div class="col-sm">
+        <select class="form-select" id="aggregation_column" onchange = "setFilterValues()" >
+            <option> province </option>
+            <option> cbp </option>
+            <option> ratinggroup </option>
+        </select>
+    </div>
+</div>
 <br>
 <b> Select the filter value: </b>
+<div class="row">
+    <div class="col-sm">
 <select class="form-select" id="aggregation_value">
     <option> ALBORZ </option>
     <option> BUSHEHR </option>
@@ -107,14 +115,25 @@ function getImages(){
     <option> ARDABIL </option>
     <option> EAST AZERBAIJAN </option>
 </select>
+</div>
+</div>
 
 <br>
 <b> Select the prediction model: </b>
+<div class="row">
+    <div class="col-sm">
 <select class="form-select" id="prediction_model">
     <option> lstm </option>
     <option> sarima </option>
     <option> fbprophet </option>
 </select>
+</div>
+</div>
+<br>
+
+z: <input type="text" id="z">
+    <br>
+interval width: <input type="text" id="interval">
 <br>
 
 
