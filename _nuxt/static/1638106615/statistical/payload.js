@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/statistical", {data:[{}],fetch:{},mutations:[["SET_TITLE",{title:"Statistical model test"}]]});
