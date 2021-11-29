@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/static/tadgan/index.html", { data: [{}], fetch: {}, mutations: [["SET_TITLE", { title: "TAD-GAN model test" }]] });
