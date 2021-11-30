@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/static/sarima/index.html", { data: [{}], fetch: {}, mutations: [["SET_TITLE", { title: "sarima prediction model" }]] });

@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/static/fbprophet/index.html", { data: [{}], fetch: {}, mutations: [["SET_TITLE", { title: "fbprophet prediction model" }]] });

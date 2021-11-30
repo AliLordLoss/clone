@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/lstm", {data:[{}],fetch:{},mutations:[["SET_TITLE",{title:"lstm prediction model"}]]});
